@@ -17,24 +17,54 @@
     <body>
         <div class="container mt-4">
             <h1>Workshop #HTML - FORM</h1>
-                 <form>
+                <form>
                     <div class="row">
-                    <div class="col-sm-12 col-md-4">
-                <label for="lname">ชื่อ</lael> 
-                </div>
-                <div class="col">
-                    <input id="lname" class="form-control">
-            </div>
-            </div>
-            <div class="row mt-3">
-            <div class="col-sm-12 col-md-4">
-                <label for="lname">สกุล</lael> 
-                </div>
-                <div class="col">
-                    <input id="lname" class="form-control">
-            </div>
-            </div>
-        </form>    
+                        <div class="col-sm-12 col-md-4">
+                            <label for="lname">ชื่อ</lael> 
+                        </div>
+                            <div class="col">
+                                <input id="lname" class="form-control">
+                            </div>
+                        </div>
+                    <div class="row mt-1">
+                        <div class="col-sm-12 col-md-4">
+                            <label for="lname">สกุล</label> 
+                        </div>
+                            <div class="col">
+                                <input id="lname" class="form-control">
+                            </div>
+                        </div>
+                    <div class="row mt-1">
+                        <div class="col-sm-12 col-md-4">
+                            <label for="lname">วัน/เดือน/ปีเกิด</lael> 
+                        </div>
+                            <div class="col">
+                                <input class="form-control" type="text" value="dd / mm / yyyy" aria-label="readonly input example" readonly>
+                            </div>
+                        </div>
+                    <div class="row mt-1">
+                        <div class="col-sm-12 col-md-4">
+                            <label for="lname">อายุ</lael> 
+                        </div>
+                            <div class="col">
+                                <input id="lname" class="form-control">
+                            </div>
+                        </div>
+                    <div class="row mt-1">
+                        <div class="col-sm-12 col-md-4">
+                            <label for="lname">เพศ</lael> 
+                        </div>
+                            <div class="col">
+                                <label>
+                                    <input type="radio" name="gender" value="male"> ชาย
+                                </label>
+
+                                <label style="margin-left: 20px;">
+                                    <input type="radio" name="gender" value="female"> หญิง
+                                </label>
+                            </div>
+                        </div>
+                </form>    
         </div>
     </body>
     
