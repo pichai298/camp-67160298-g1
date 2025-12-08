@@ -24,24 +24,40 @@
                         </div>
                             <div class="col">
                                 <input id="lname" class="form-control">
-                            </div>
                         </div>
+                    </div>
+
                     <div class="row mt-1">
                         <div class="col-sm-12 col-md-4">
                             <label for="lname">สกุล</label> 
                         </div>
                             <div class="col">
                                 <input id="lname" class="form-control">
-                            </div>
                         </div>
+                    </div>
+
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
                     <div class="row mt-1">
                         <div class="col-sm-12 col-md-4">
-                            <label for="lname">วัน/เดือน/ปีเกิด</lael> 
+                            <label for="birthdate" class="form-label">วัน/เดือน/ปีเกิด</label>
                         </div>
-                            <div class="col">
-                                <input class="form-control" type="text" value="dd / mm / yyyy" aria-label="readonly input example" readonly>
+                        <div class="col">
+                            <div class="input-group">
+                                <input 
+                                    id="birthdate"
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="dd / mm / yyyy"
+                                    readonly
+                                >
+                                <span class="input-group-text">
+                                    <i class="bi bi-calendar-event"></i>
+                                </span>
                             </div>
                         </div>
+                    </div>
+
                     <div class="row mt-1">
                         <div class="col-sm-12 col-md-4">
                             <label for="lname">อายุ</lael> 
@@ -49,7 +65,8 @@
                             <div class="col">
                                 <input id="lname" class="form-control">
                             </div>
-                        </div>
+                    </div>
+
                     <div class="row mt-1">
                         <div class="col-sm-12 col-md-4">
                             <label for="lname">เพศ</lael> 
@@ -63,7 +80,68 @@
                                     <input type="radio" name="gender" value="female"> หญิง
                                 </label>
                             </div>
+                    </div>
+
+                    <div class="row mt-1">
+                        <div class="col-sm-12 col-md-4">
+                            <label for="lname">รูป</lael> 
                         </div>
+                            <div class="col">
+                                <input class="form-control" type="file" id="formFile">
+                            </div>
+                    </div>
+
+                    <div class="row mt-1">
+                        <div class="col-sm-12 col-md-4">
+                            <label for="lname">ที่อยู่</lael> 
+                        </div>
+                            <div class="col">
+                                <textarea id="address2" class="form-control" rows="5"></textarea>
+                            </div>
+                    </div>
+
+                    <div class="row mt-1">
+                        <div class="col-sm-12 col-md-4">
+                            <label for="lname">สีที่ชอบ</lael> 
+                        </div>
+                            <div class="col">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Color</option>
+                                    <option value="1">ชมพู</option>
+                                    <option value="2">เหลือง</option>
+                                    <option value="3">ฟ้า</option>
+                                    </select>
+                            </div>
+                    </div>
+
+                    <div class="row mt-1">
+                        <div class="col-sm-12 col-md-4">
+                            <label for="lname">แนวเพลงที่ชอบ</lael> 
+                        </div>
+                            <div class="col">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Music</option>
+                                    <option value="1">K-Pop</option>
+                                    <option value="2">ลูกทุ่ง</option>
+                                    <option value="3">สากล</option>
+                                    </select>
+                            </div>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                            <label class="form-check-label" for="checkDefault">
+                                ยินยอนให้เก็บข้อมูล
+                            </label>
+                    </div>
+
+                    <div class="col-12">
+                        <button type="reset" class="btn btn-primary--bs-border-color">Reset</button>
+                        
+                        <label style="margin-left: 200px;">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </label>
+                    </div>
                 </form>    
         </div>
     </body>
