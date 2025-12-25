@@ -6,21 +6,45 @@ use Illuminate\Http\Request;
 
 class MyController extends Controller
 {
-    //
-    private $myvalue1;
-    public $myvalue = "";
+    private $myvalue;
     protected $myvalue2;
+    public $myval = "";
+    // Constructor
+    // MyController()
+    function __construct(){
+
+    }
 
     function index(){
         return view('myview.index');
     }
 
-    function info(Request $rep){
+    function info(Request $req){
         return view('myview.info');
     }
 
-    function calculate(Request $rep){
-        echo $rep->input('myview.calculate');
+    function calculate(Request $req){
+        echo $req->input('mynumber');
+        $data['num'] = $req->input('mynumber');
+        return view('myview.calculate', $data);
     }
+
+     public function html101(){
+        return view('html101');
+    }
+
+    public function me(Request $request)
+{
+    return view('myview.me', [
+        'fname' => $request->fname,
+        'lname' => $request->lname,
+        'birthdate' => $request->birthdate,
+        'age' => $request->age,
+        'gender' => $request->gender,
+        'address' => $request->address,
+        'color' => $request->color,
+        'music' => $request->music,
+    ]);
+}
 
 }

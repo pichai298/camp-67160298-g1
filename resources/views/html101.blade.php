@@ -5,7 +5,9 @@
 @section('content')
 <h1>Workshop #HTML - FORM</h1>
 
-<form class="needs-validation" novalidate>
+<form action="/me" method="post" enctype="multipart/form-data" novalidate>
+    @csrf
+
 
     {{-- ชื่อ --}}
     <div class="row mb-2">
@@ -13,7 +15,7 @@
             <label for="fname" class="form-label">ชื่อ</label>
         </div>
         <div class="col">
-            <input id="fname" class="form-control check" required>
+            <input id="fname" name="fname" class="form-control check">
             <div class="valid-feedback">ถูกต้อง</div>
             <div class="invalid-feedback">โปรดระบุชื่อ</div>
         </div>
@@ -25,7 +27,7 @@
             <label for="lname" class="form-label">สกุล</label>
         </div>
         <div class="col">
-            <input id="lname" class="form-control check" required>
+            <input id="lname" name="lname" class="form-control check">
             <div class="valid-feedback">ถูกต้อง</div>
             <div class="invalid-feedback">โปรดระบุนามสกุล</div>
         </div>
@@ -37,7 +39,7 @@
             <label for="birthdate" class="form-label">วัน/เดือน/ปีเกิด</label>
         </div>
         <div class="col">
-            <input type="date" id="birthdate" class="form-control check" required>
+            <input type="date" id="birthdate" name="birthdate" class="form-control check">
             <div class="valid-feedback">ถูกต้อง</div>
             <div class="invalid-feedback">โปรดเลือกวันเกิด</div>
         </div>
@@ -49,7 +51,7 @@
             <label for="age" class="form-label">อายุ</label>
         </div>
         <div class="col">
-            <input type="number" id="age" class="form-control check" required>
+            <input type="number" id="age" name="age" class="form-control check">
             <div class="valid-feedback">ถูกต้อง</div>
             <div class="invalid-feedback">โปรดระบุอายุ</div>
         </div>
@@ -62,11 +64,11 @@
         </div>
         <div class="col">
             <div class="form-check">
-                <input class="form-check-input check" type="radio" name="gender" value="male" >
+                <input class="form-check-input check" type="radio" name="gender" value="male">
                 <label class="form-check-label">ชาย</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input check" type="radio" name="gender" value="female" >
+                <input class="form-check-input check" type="radio" name="gender" value="female">
                 <label class="form-check-label">หญิง</label>
             </div>
         </div>
@@ -78,7 +80,7 @@
             <label for="photo" class="form-label">รูป</label>
         </div>
         <div class="col">
-            <input type="file" id="photo" class="form-control check" required>
+            <input type="file" id="photo" name="photo" class="form-control check">
             <div class="invalid-feedback">โปรดเลือกรูป</div>
         </div>
     </div>
@@ -89,7 +91,7 @@
             <label for="address" class="form-label">ที่อยู่</label>
         </div>
         <div class="col">
-            <textarea id="address" class="form-control check" rows="4" required></textarea>
+            <textarea id="address" name="address" class="form-control check"></textarea>
             <div class="invalid-feedback">โปรดระบุที่อยู่</div>
         </div>
     </div>
@@ -100,7 +102,7 @@
             <label for="color" class="form-label">สีที่ชอบ</label>
         </div>
         <div class="col">
-            <select id="color" class="form-select check" required>
+            <select id="color" name="color" class="form-select check">
                 <option value="">-- เลือกสี --</option>
                 <option>ชมพู</option>
                 <option>เหลือง</option>
@@ -116,7 +118,7 @@
             <label for="music" class="form-label">แนวเพลงที่ชอบ</label>
         </div>
         <div class="col">
-            <select id="music" class="form-select check" required>
+            <select id="music" name="music" class="form-select check">
                 <option value="">-- เลือกแนวเพลง --</option>
                 <option>K-Pop</option>
                 <option>ลูกทุ่ง</option>
@@ -128,7 +130,7 @@
 
     {{-- ยินยอม --}}
     <div class="form-check mb-3">
-        <input class="form-check-input" type="checkbox" id="agree" required>
+        <input class="form-check-input check" type="checkbox" id="agree" name="agree">
         <label class="form-check-label" for="agree">
             ยินยอมให้เก็บข้อมูล
         </label>
@@ -137,8 +139,7 @@
 
     {{-- ปุ่ม --}}
     <button type="reset" class="btn btn-secondary">Reset</button>
-    <button type="button" class="btn btn-primary ms-3" onclick="clickMe()">Submit</button>
-
+    <button type="submit" class="btn btn-primary ms-3">Submit</button>
 
 </form>
 @endsection
@@ -214,4 +215,6 @@ function clickMe(){
 
 }
 </script>
+
+
 @endpush
