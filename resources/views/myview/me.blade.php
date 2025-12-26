@@ -12,6 +12,8 @@
     <li>อายุ: {{ $age }}</li>
     <li>เพศ: {{ $gender }}</li>
     <li>ที่อยู่: {{ $address }}</li>
+    <li>สี: {{ $color }}</li>
+    <li>เพลง: {{ $music }}</li>
 </ul>
 
 <a href="/">กลับไปกรอกใหม่</a>

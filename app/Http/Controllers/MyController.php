@@ -33,8 +33,7 @@ class MyController extends Controller
         return view('html101');
     }
 
-    public function me(Request $request)
-{
+    public function me(Request $request){
     return view('myview.me', [
         'fname' => $request->fname,
         'lname' => $request->lname,
