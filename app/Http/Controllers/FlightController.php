@@ -7,21 +7,15 @@ use App\Models\Flight;
 
 class FlightController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
         $data['flights'] = Flight::all();
-        return view('flights/index', $data);
+        return view('flights.index', $data);
     }
-    /**
-     * Store a newly created resource in storage.
-     */
+
     public function store(Request $request)
     {
-        //
-        // use App\Models\Flight; ใส่ข้างบนก่อน
 
         $flight = new Flight;
         $flight->name = $request->input('name');
@@ -33,37 +27,16 @@ class FlightController extends Controller
         return redirect('/flights');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
 
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(string $id)
     {
         $data['flight_update'] = Flight::find($id);
-        $data['flight'] = Flight::all();
+        $data['flights'] = Flight::all();
 
         return view('flights.update', $data);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+
     public function update(Request $request, string $id)
     {
         //
@@ -79,12 +52,9 @@ class FlightController extends Controller
 
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+
     public function destroy(string $id)
     {
-        //
         $flight = Flight::find($id);
         $flight->delete();
         return redirect('/flights');
