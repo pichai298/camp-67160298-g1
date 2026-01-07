@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Flight extends Model
+class Pokedex extends Model
 {
     //บรรทัดนี้จะบอก laravel ว่า ไม่ต้องเดาชื่อตาราง ให้ใช้ชื่อนี้เลย
-    //protected $table = 'pokedexs';
-    //protected $guarded = [];
+    protected $table = 'pokedexs';
+    protected $guarded = [];
 }
