@@ -58,8 +58,8 @@ class PokedexsController extends Controller
      */
     public function edit(string $id)
     {
-        $data['pokedex_update'] = Pokedexs::find($id);
-        $data['pokedexs'] = Pokedexs::all();
+        $data['pokedex_update'] = Pokedex::find($id); // Correct Model name
+        $data['pokedexs'] = Pokedex::all();           // Correct Model name
 
         return view('pokedexs.update', $data);
     }
