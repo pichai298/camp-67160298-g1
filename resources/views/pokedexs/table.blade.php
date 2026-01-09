@@ -14,18 +14,18 @@
             <td>Image_url</td>
         </tr>
         </thead>
-        @foreach ($pokedexs as $item)
+        @foreach ($pokedexs as $index => $item)
     <tr>
-        <td>{{ $item->id }}</td>
+        <td>{{ $index + 1 }}</td>
         <td>{{ $item->name }}</td>
-        <td>{{ $item->Type }}</td>
-        <td>{{ $item->Species }}</td>
-        <td>{{ $item->Height }}</td>
-        <td>{{ $item->Weight }}</td>
-        <td>{{ $item->Hp }}</td>
-        <td>{{ $item->Attack }}</td>
-        <td>{{ $item->Defense }}</td>
-        <td>{{ $item->Image_url }}</td>
+        <td>{{ $item->type }}</td>
+        <td>{{ $item->species }}</td>
+        <td>{{ $item->height }}</td>
+        <td>{{ $item->weight }}</td>
+        <td>{{ $item->hp }}</td>
+        <td>{{ $item->attack }}</td>
+        <td>{{ $item->defense }}</td>
+        <td>{{ $item->image_url }}</td>
         <td>
             <a class="btn btn-warning"
                href="{{ url('/pokedexs/'.$item->id.'/edit') }}">
