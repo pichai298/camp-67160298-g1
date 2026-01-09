@@ -23,7 +23,7 @@
         <input class="form-control" type="float" name="defense" id="defense" value="{{$pokedex_update->defense}}">
         <lable for="image_url">image_url</lable>
         <input class="form-control" type="text" name="image_url" id="image_url" value="{{$pokedex_update->image_url}}">
-
+        <br>
         <button class="btn btn-primary" type="submit">บันทึก</button>
     </form>
     @include('pokedexs.table')

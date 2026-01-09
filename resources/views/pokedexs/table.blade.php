@@ -26,12 +26,13 @@
         <td>{{ $item->attack }}</td>
         <td>{{ $item->defense }}</td>
         <td>{{ $item->image_url }}</td>
+        
         <td>
             <a class="btn btn-warning"
                href="{{ url('/pokedexs/'.$item->id.'/edit') }}">
                แก้ไข
             </a>
-
+            <br>
             <form style="display:inline-block"
                   action="{{ url('/pokedexs/'.$item->id) }}"
                   method="post">
